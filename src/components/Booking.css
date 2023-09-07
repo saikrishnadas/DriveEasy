@@ -1,0 +1,131 @@
+.booking-container {
+	width: 460px;
+	border: 1px solid #80808058;
+	border-radius: 10px;
+	padding: 20px 10px 0px 10px;
+}
+
+.input-container-main {
+	margin-top: 20px;
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	align-items: center;
+}
+
+.title {
+	font-weight: bold;
+	font-size: 18px;
+	user-select: none;
+}
+
+.input-container {
+	position: relative;
+	width: 90%; /* Adjust the width to your preference */
+}
+
+.input-box {
+	width: 88%;
+	height: 40px;
+	background-color: #8080802e;
+	border: none;
+	border-radius: 8px;
+	font-size: 16px;
+	padding-left: 34px;
+}
+
+.input-box:focus {
+	outline-color: #036d03;
+}
+
+.input-box::placeholder {
+	color: #808080a3;
+}
+
+.icon {
+	position: absolute;
+	left: 10px; /* Adjust the left position to your preference */
+	top: 50%; /* Center vertically */
+	transform: translateY(-50%);
+}
+
+.car-select {
+	margin-top: 20px;
+}
+
+.car-image {
+	width: 100px;
+	cursor: pointer;
+	margin-left: 16px;
+	padding-top: 4px;
+	user-select: none;
+}
+
+.car-container {
+	margin-top: 10px;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 20px 10px;
+}
+
+.car-box {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	width: 140px;
+	height: 80px;
+	border: 1px solid #80808056;
+	border-radius: 6px;
+	cursor: pointer;
+}
+.car-type {
+	display: flex;
+	font-size: 14px;
+	justify-content: space-around;
+	user-select: none;
+}
+
+.car-type-title {
+	color: #808080ed;
+}
+
+.payment-select {
+	margin-top: 20px;
+}
+
+.payment-container {
+	margin-top: 10px;
+	display: flex;
+	justify-content: space-around;
+}
+.payment-image {
+	width: 50px;
+	cursor: pointer;
+	padding-top: 4px;
+	user-select: none;
+}
+.payment-type {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100px;
+	height: 50px;
+	border: 1px solid #80808056;
+	border-radius: 6px;
+	cursor: pointer;
+}
+
+.book-button {
+	margin-top: 26px;
+	background-color: #036d03;
+	width: 100%;
+	height: 40px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 8px;
+	cursor: pointer;
+	color: white;
+	font-weight: bold;
+	user-select: none;
+}
