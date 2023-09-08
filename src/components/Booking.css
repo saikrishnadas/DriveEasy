@@ -35,7 +35,7 @@
 }
 
 .input-box:focus {
-	outline-color: #036d03;
+	outline-color: #04c704;
 }
 
 .input-box::placeholder {
@@ -128,6 +128,10 @@
 	color: white;
 	font-weight: bold;
 	user-select: none;
+}
+
+.book-button:hover {
+	background-color: #036d03ed;
 }
 
 .car-box-selected {
