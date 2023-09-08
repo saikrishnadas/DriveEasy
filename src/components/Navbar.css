@@ -36,3 +36,14 @@
 	font-size: 18px;
 	cursor: pointer;
 }
+
+.profile-menu-container {
+	position: absolute;
+	margin-top: 10px; /* Adjust the margin to control the distance between elements */
+	background-color: #eeeeee;
+	padding: 10px;
+	border-radius: 8px;
+	top: 12%; /* Position the menu below the parent element */
+	right: 2%;
+	z-index: 100;
+}

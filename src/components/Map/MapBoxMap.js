@@ -13,7 +13,7 @@ function MapBoxMap() {
                     latitude: 37.8,
                     zoom: 14
                 }}
-                style={{ width: 650, height: 400 }}
+                style={{ width: 900, height: 500 }}
                 mapStyle="mapbox://styles/mapbox/streets-v9"
             />
         </div>

@@ -1,0 +1,14 @@
+.profile-menu {
+	display: flex;
+	flex-direction: column;
+	gap: 30px;
+	padding: 10px 20px 10px 20px;
+}
+
+.profile-items {
+	cursor: pointer;
+}
+
+.profile-items:hover {
+	color: #04c704;
+}

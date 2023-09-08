@@ -22,13 +22,13 @@ function Booking() {
                 Get a ride
             </div>
             <div className='input-container-main'>
-                <div class="input-container">
-                    <span class="icon">🔍</span>
+                <div className="input-container">
+                    <span className="icon">🔍</span>
                     <input type="text" className='input-box' placeholder='Where From' />
                 </div>
 
-                <div class="input-container">
-                    <span class="icon">🔍</span>
+                <div className="input-container">
+                    <span className="icon">🔍</span>
                     <input type="text" className='input-box' placeholder='Where To' />
                 </div>
             </div>
