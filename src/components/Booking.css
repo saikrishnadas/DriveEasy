@@ -129,3 +129,33 @@
 	font-weight: bold;
 	user-select: none;
 }
+
+.car-box-selected {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	width: 140px;
+	height: 80px;
+	border: 2px solid #04c704;
+	border-radius: 6px;
+	cursor: pointer;
+}
+
+.car-image-selected {
+	width: 120px;
+	cursor: pointer;
+	margin-left: 10px;
+	padding-top: 4px;
+	user-select: none;
+}
+
+.payment-type-selected {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100px;
+	height: 50px;
+	border: 2px solid #04c704;
+	border-radius: 6px;
+	cursor: pointer;
+}

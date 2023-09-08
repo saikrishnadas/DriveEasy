@@ -1,4 +1,4 @@
-import React from 'react'
+import { useState } from 'react'
 import "./Booking.css";
 import Economy from "../images/car1.png";
 import MiniVan from "../images/car2.png";
@@ -14,6 +14,8 @@ import ApplePay from "../images/apple-pay.png"
 
 function Booking() {
     let windowHeight = window.innerHeight * 0.78;
+    const [carType, setCarType] = useState();
+    const [paymentType, setPaymentType] = useState();
     return (
         <div className='booking-container' style={{ height: windowHeight }}>
             <div className='title'>
@@ -35,36 +37,36 @@ function Booking() {
                     Select Car
                 </div>
                 <div className='car-container'>
-                    <div className='car-box'>
-                        <img src={Economy} alt="Logo" className='car-image' />
+                    <div className={carType === 'economy' ? 'car-box-selected ' : 'car-box'} onClick={() => setCarType('economy')}>
+                        <img src={Economy} alt="Logo" className={carType === 'economy' ? 'car-image-selected ' : 'car-image'} />
                         <div className='car-type'>
                             <div className='car-type-title'>Economy</div>
                             <div>26.01$</div>
                         </div>
                     </div>
-                    <div className='car-box'>
-                        <img src={MiniVan} alt="Logo" className='car-image' />
+                    <div className={carType === 'minivan' ? 'car-box-selected ' : 'car-box'} onClick={() => setCarType('minivan')}>
+                        <img src={MiniVan} alt="Logo" className={carType === 'minivan' ? 'car-image-selected ' : 'car-image'} />
                         <div className='car-type'>
                             <div className='car-type-title'>MiniVan</div>
                             <div>26.01$</div>
                         </div>
                     </div>
-                    <div className='car-box'>
-                        <img src={Comfort} alt="Logo" className='car-image' />
+                    <div className={carType === 'comfort' ? 'car-box-selected ' : 'car-box'} onClick={() => setCarType('comfort')}>
+                        <img src={Comfort} alt="Logo" className={carType === 'comfort' ? 'car-image-selected ' : 'car-image'} />
                         <div className='car-type'>
                             <div className='car-type-title'>Comfort</div>
                             <div>26.01$</div>
                         </div>
                     </div>
-                    <div className='car-box'>
-                        <img src={Luxury} alt="Logo" className='car-image' />
+                    <div className={carType === 'luxury' ? 'car-box-selected ' : 'car-box'} onClick={() => setCarType('luxury')}>
+                        <img src={Luxury} alt="Logo" className={carType === 'luxury' ? 'car-image-selected ' : 'car-image'} />
                         <div className='car-type'>
                             <div>Luxury</div>
                             <div>26.01$</div>
                         </div>
                     </div>
-                    <div className='car-box'>
-                        <img src={Electric} alt="Logo" className='car-image' />
+                    <div className={carType === 'electric' ? 'car-box-selected ' : 'car-box'} onClick={() => setCarType('electric')}>
+                        <img src={Electric} alt="Logo" className={carType === 'electric' ? 'car-image-selected ' : 'car-image'} />
                         <div className='car-type'>
                             <div className='car-type-title'>Electric</div>
                             <div>26.01$</div>
@@ -78,19 +80,19 @@ function Booking() {
                     Payment
                 </div>
                 <div className='payment-container'>
-                    <div className='payment-type'>
+                    <div className={paymentType === 'cash' ? 'payment-type-selected' : 'payment-type'} onClick={() => setPaymentType('cash')}>
                         <img src={Cash} alt="Logo" className='payment-image' />
 
                     </div>
-                    <div className='payment-type'>
+                    <div className={paymentType === 'googlepay' ? 'payment-type-selected' : 'payment-type'} onClick={() => setPaymentType('googlepay')}>
                         <img src={GooglePay} alt="Logo" className='payment-image' />
 
                     </div>
-                    <div className='payment-type'>
+                    <div className={paymentType === 'visa' ? 'payment-type-selected' : 'payment-type'} onClick={() => setPaymentType('visa')}>
                         <img src={Visa} alt="Logo" className='payment-image' />
 
                     </div>
-                    <div className='payment-type'>
+                    <div className={paymentType === 'applepay' ? 'payment-type-selected' : 'payment-type'} onClick={() => setPaymentType('applepay')}>
                         <img src={ApplePay} alt="Logo" className='payment-image' />
 
                     </div>
