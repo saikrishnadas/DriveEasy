@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import "./Booking.css";
 import Economy from "../images/car1.png";
 import MiniVan from "../images/car2.png";
@@ -12,20 +12,46 @@ import Card from "../images/card.png"
 import Visa from "../images/visa.png"
 import ApplePay from "../images/apple-pay.png"
 
+const BaseSearchURL = `https://api.mapbox.com/search/searchbox/v1/suggest`
+
+
 function Booking() {
     let windowHeight = window.innerHeight * 0.78;
     const [carType, setCarType] = useState();
     const [paymentType, setPaymentType] = useState();
+    const [source, setSource] = useState();
+    const [addressList, setAddressList] = useState([]);
+
+    const getSearch = async () => {
+        const res = await fetch(BaseSearchURL + `?q=${source}?language=en&limit=1&session_token=${process.env.REACT_APP_MAPBOX_SESSION_TOKEN}&country=IN&access_token=${process.env.REACT_APP_MAPBOX_ACCESS_TOKEN}`, { headers: { "Content-Type": "application/json" } })
+        const data = await res.json();
+        // console.log(data.suggestions)
+        setAddressList(data.suggestions)
+    }
+
+    useEffect(() => {
+        const delayDebounceFn = setTimeout(() => {
+            getSearch();
+        }, 1000);
+        return () => clearTimeout(delayDebounceFn);
+    }, [source])
+
     return (
         <div className='booking-container' style={{ height: windowHeight }}>
-            <div className='title'>
+            <div className='title' onClick={getSearch}>
                 Get a ride
             </div>
             <div className='input-container-main'>
                 <div className="input-container">
                     <span className="icon">🔍</span>
-                    <input type="text" className='input-box' placeholder='Where From' />
+                    <input type="text" className='input-box' placeholder='Where From' value={source} onChange={(e) => setSource(e.target.value)} />
                 </div>
+
+                {addressList ? <div>
+                    {addressList?.map((item, index) => (
+                        <h2 key={index}>{item.full_address}</h2>
+                    ))}
+                </div> : null}
 
                 <div className="input-container">
                     <span className="icon">🔍</span>
