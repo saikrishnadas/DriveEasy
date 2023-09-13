@@ -163,3 +163,25 @@
 	border-radius: 6px;
 	cursor: pointer;
 }
+
+.address-box {
+	max-height: 200px;
+	max-width: 400px;
+	background-color: #eeeeee;
+	position: absolute;
+	margin-top: 50px;
+	z-index: 100;
+	border-radius: 8px;
+	overflow: scroll;
+	overflow-x: hidden;
+}
+
+.address-box > div {
+	line-height: 1;
+	padding: 10px;
+	cursor: pointer;
+}
+
+.address-box > div:hover {
+	color: #04c704;
+}

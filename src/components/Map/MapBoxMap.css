@@ -1,3 +1,8 @@
 .mapbox-container {
 	z-index: 1;
 }
+
+.marker-image {
+	width: 50px;
+	height: 50px;
+}
