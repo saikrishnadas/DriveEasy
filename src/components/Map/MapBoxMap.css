@@ -1,8 +1,17 @@
 .mapbox-container {
 	z-index: 1;
+	border-radius: 10px;
+	overflow: hidden;
+	margin-left: 20px;
+	max-width: 120vh;
 }
 
 .marker-image {
 	width: 50px;
 	height: 50px;
+}
+
+.marker-image-dest {
+	width: 30px;
+	height: 40px;
 }
