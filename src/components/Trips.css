@@ -1,0 +1,51 @@
+.trips-container {
+	margin: 30px 40px 0px 40px;
+	display: flex;
+	justify-content: space-between;
+}
+
+.my-menu {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}
+
+.menu-item {
+	padding: 14px 24px 14px 24px;
+	width: 160px;
+	text-align: center;
+	cursor: pointer;
+}
+
+.menu-item-selected {
+	padding: 14px 24px 14px 24px;
+	margin-right: 10px;
+	width: 160px;
+	text-align: center;
+	cursor: pointer;
+	background-color: #04c7046d;
+}
+
+.my-menu > div:hover {
+	background-color: #04c7046d;
+}
+
+.trip-history {
+	text-align: start;
+	flex: 0 0 70%;
+}
+
+.trip-history > div:first-child {
+	font-weight: bold;
+	font-size: 24px;
+}
+
+.trip-box {
+	display: flex;
+	justify-content: space-between;
+	border: 2px solid #04c704;
+	padding: 20px;
+	align-items: center;
+	border-radius: 10px;
+	margin-top: 20px;
+}
